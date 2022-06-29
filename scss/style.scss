@@ -1,0 +1,117 @@
+@import "nullstyle";
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #010206;
+}
+.container {
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.page-body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Первая страница first page
+.startPage {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+}
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    & img {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
+}
+.nav_list {
+    display: flex;
+    column-gap: 30px;
+}
+.nav_link {
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    color: #E3E4E6;
+    transition: all .5s;
+    &.nav_link:hover{
+        color: #BC3CD8;
+        transition: all .5s;
+        &.nav_link::after {
+            opacity: 1;
+            visibility: visible;
+            bottom: -10px;
+        }
+    }
+}
+.nav_link::after {
+    content: "";
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
+        transition: all .5s;
+}
+.title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: rgba(227, 228, 230, 0.55);
+    transform: translate(0, -120%);
+    opacity: 0;
+    transition: all .8s;
+    & span {
+        font-weight: 600;
+        color: #E3E4E6;
+    }
+}
+.title.active{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.startPage_title {
+    font-size: 56px;
+}
+.arrow-down {
+    margin-bottom: 40px;
+    & svg {
+        animation: move 1.5s linear alternate infinite;
+    } 
+    @keyframes move {
+    from{transform: translateY(0px)};
+    50% {transform: translateY(-15px)};
+    to {transform: translateY(-30px)};
+    } 
+}   
+
+// Вторая страница two page
+
+
+@import "mobile";
