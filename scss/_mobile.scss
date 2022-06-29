@@ -101,14 +101,19 @@
 }
 
 
-
+@media (max-width: 950px){
+    .clients {
+        gap: 50px;
+        justify-content: center;
+    }
+}
 @media (max-width: 800px){
     .startPage_title{
         font-size: 40px;
     }
 }
 @media (max-width: 590px){
-    .startPage_title{
+    .title{
         font-size: 30px;
     }
 }
@@ -118,6 +123,14 @@
     }
     .navigation {
         display: none;
+    }
+    .twoPage {
+        padding: 50px 0;
+    }
+    .title {
+        & h2 {
+            margin-bottom: 30px;
+        }
     } 
 }
 

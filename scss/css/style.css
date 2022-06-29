@@ -157,25 +157,30 @@ body {
   font-weight: 300;
   font-size: 40px;
   line-height: 150%;
-  text-align: center;
   letter-spacing: -0.02em;
   color: rgba(227, 228, 230, 0.55);
-  transform: translate(0, -120%);
-  opacity: 0;
-  transition: all 0.8s;
+  transition: all 1.8s;
 }
 .title span {
   font-weight: 600;
   color: #E3E4E6;
 }
-
-.title.active {
-  transform: translate(0, 0);
-  opacity: 1;
+.title h2 {
+  display: block;
+  max-width: 520px;
+  margin-bottom: 80px;
 }
 
 .startPage_title {
+  opacity: 0;
   font-size: 56px;
+  text-align: center;
+  transform: translate(0, -120%);
+}
+
+.startPage_title.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .arrow-down {
@@ -205,6 +210,82 @@ body {
   }
   to {
     transform: translateY(-30px);
+  }
+}
+
+.twoPage {
+  padding: 80px 0 130px;
+  background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+}
+
+.twoPage_title {
+  transition: all 1s;
+  transform: translate(120%, 0);
+  opacity: 0;
+}
+
+.twoPage_title.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.clients {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.clients img:nth-child(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.clients img:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.clients img:nth-child(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.clients img:nth-child(4) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.clients_img {
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: all 1s;
+}
+
+.clients_img.active {
+  opacity: 1;
+  -webkit-animation: scale 1s linear;
+          animation: scale 1s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes scale {
+  from {
+    transform: scale(0, 0);
+  }
+  80% {
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@keyframes scale {
+  from {
+    transform: scale(0, 0);
+  }
+  80% {
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    transform: scale(1, 1);
   }
 }
 
@@ -312,13 +393,19 @@ body {
   background-color: #1b131d;
 }
 
+@media (max-width: 950px) {
+  .clients {
+    gap: 50px;
+    justify-content: center;
+  }
+}
 @media (max-width: 800px) {
   .startPage_title {
     font-size: 40px;
   }
 }
 @media (max-width: 590px) {
-  .startPage_title {
+  .title {
     font-size: 30px;
   }
 }
@@ -329,5 +416,13 @@ body {
 
   .navigation {
     display: none;
+  }
+
+  .twoPage {
+    padding: 50px 0;
+  }
+
+  .title h2 {
+    margin-bottom: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
