@@ -59,13 +59,11 @@
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    top: 0;
-    right: 0;
     z-index: 9;
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(99.05deg, #e297f3 0.07%, #ee2299 106.32%);
-    
+    transition: all .5s;
 }
 .mobile-nav-active {
     opacity: 1;
@@ -106,6 +104,9 @@
         gap: 50px;
         justify-content: center;
     }
+    .threePage-item_subtitle {
+        font-size: 20px;
+    }
 }
 @media (max-width: 800px){
     .startPage_title{
@@ -116,6 +117,14 @@
     .title{
         font-size: 30px;
     }
+    .threePage-item {
+        grid-template-columns: 1fr;
+    }
+    .threePage-item:nth-child(even){
+        & .threePage-item_img {
+            order: -1;
+        }
+    }
 }
 @media (max-width: 425px){
     #nav-icon1{ 
@@ -125,12 +134,18 @@
         display: none;
     }
     .twoPage {
-        padding: 50px 0;
+        padding: 25px 0;
     }
     .title {
         & h2 {
             margin-bottom: 30px;
         }
+    }
+    .threePage {
+        padding: 25px 0;
+    }
+    .threePage-body {
+        row-gap: 50px;
     } 
 }
 
