@@ -107,6 +107,9 @@
     .threePage-item_subtitle {
         font-size: 20px;
     }
+    .fourPage_subtitle {
+        font-size: 20px;
+    }
 }
 @media (max-width: 800px){
     .startPage_title{
@@ -124,6 +127,15 @@
         & .threePage-item_img {
             order: -1;
         }
+    }
+    .fourPage_body {
+        grid-template-columns: 1fr;
+    }
+    .footer_title {
+        font-size: 36px;
+    }
+    .footer_copyright{
+        font-size: 16px;
     }
 }
 @media (max-width: 425px){
@@ -146,6 +158,12 @@
     }
     .threePage-body {
         row-gap: 50px;
+    }
+    .fourPage {
+        padding: 50px 0;
+    }
+    .footer {
+        padding: 50px 0px;
     } 
 }
 

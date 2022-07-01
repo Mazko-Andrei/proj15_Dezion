@@ -46,7 +46,9 @@ if (animeItems.length > 0) {
             if((scrollY > animeItemOffset - animeItemPoint) && scrollY < (animeItemOffset + animeItemHeight)){
                 animItem.classList.add('active');
             } else {
-                animItem.classList.remove('active');
+                if(!animItem.classList.contains('anim-no-hide')){
+                    animItem.classList.remove('active');
+                }
             }
         }
     }
@@ -56,5 +58,8 @@ if (animeItems.length > 0) {
             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
     }
-    animOnScroll();
+    setTimeout(() => {
+        animOnScroll();
+    }, 300);
+    
 }
