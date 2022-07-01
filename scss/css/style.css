@@ -224,6 +224,7 @@ body {
 .twoPage_title h2 {
   transform: translate(120%, 0);
   transition: all 1s;
+  transition-delay: 0.5s;
   opacity: 0;
   visibility: hidden;
 }
@@ -307,6 +308,10 @@ body {
   row-gap: 100px;
 }
 
+.threePage_title {
+  transition-delay: 1s;
+}
+
 .threePage-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -343,13 +348,13 @@ body {
     transform: rotate(0);
   }
   25% {
-    transform: rotate(30deg);
+    transform: rotate(2deg);
   }
   50% {
-    transform: rotate(-30deg);
+    transform: rotate(-2deg);
   }
   75% {
-    transform: rotate(30deg);
+    transform: rotate(2deg);
   }
   100% {
     transform: rotate(0);
@@ -360,13 +365,13 @@ body {
     transform: rotate(0);
   }
   25% {
-    transform: rotate(30deg);
+    transform: rotate(2deg);
   }
   50% {
-    transform: rotate(-30deg);
+    transform: rotate(-2deg);
   }
   75% {
-    transform: rotate(30deg);
+    transform: rotate(2deg);
   }
   100% {
     transform: rotate(0);
@@ -574,15 +579,15 @@ body {
 .fourPage_images img:nth-child(1) {
   grid-area: A;
   align-self: center;
-  transform: translateX(-100%) rotate(0deg);
+  transform: translateX(-100%) rotate(180deg);
 }
 .fourPage_images img:nth-child(2) {
   grid-area: B;
-  transform: translateY(-100%) rotate(0deg);
+  transform: translate(0, -50%) rotate(-180deg);
 }
 .fourPage_images img:nth-child(3) {
   grid-area: C;
-  transform: translateY(100%) rotate(0deg);
+  transform: translate(0, 50%) rotate(180deg);
 }
 .fourPage_images img.active {
   opacity: 1;
