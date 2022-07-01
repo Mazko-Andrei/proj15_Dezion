@@ -63,3 +63,15 @@ if (animeItems.length > 0) {
     }, 300);
     
 }
+
+// Переход по якорю через мобильную навигацию
+
+const btn = document.querySelectorAll('.item-mob');
+
+btn.forEach(function(i){
+    i.addEventListener('click', function () {
+        mobileNav.classList.remove("mobile-nav-active");
+        body.classList.remove("no-scroll");
+        navButton.classList.remove("open");
+    });
+})

@@ -69,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }
@@ -761,6 +765,7 @@ body {
 .list-mob {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 30px;
 }
 
@@ -804,8 +809,24 @@ body {
   .startPage_title {
     font-size: 40px;
   }
+
+  .threePage {
+    padding: 25px 0;
+  }
+
+  .fourPage {
+    padding: 50px 0;
+  }
 }
 @media (max-width: 590px) {
+  #nav-icon1 {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+  }
+
   .title {
     font-size: 30px;
   }
@@ -831,14 +852,6 @@ body {
   }
 }
 @media (max-width: 425px) {
-  #nav-icon1 {
-    display: block;
-  }
-
-  .navigation {
-    display: none;
-  }
-
   .twoPage {
     padding: 25px 0;
   }
@@ -847,16 +860,8 @@ body {
     margin-bottom: 30px;
   }
 
-  .threePage {
-    padding: 25px 0;
-  }
-
   .threePage-body {
     row-gap: 50px;
-  }
-
-  .fourPage {
-    padding: 50px 0;
   }
 
   .footer {
